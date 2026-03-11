@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гид: сохранение</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:20px; background:#f7f7f7; }
+    .card { background:#fff; border-radius:8px; padding:16px; max-width:760px; margin:auto; box-shadow:0 4px 12px rgba(0,0,0,.08); }
+    .actions { margin-top:12px; }
+    button { margin-right:8px; padding:8px 14px; border:none; border-radius:4px; background:#007bff; color:#fff; cursor:pointer; }
+    textarea { width:100%; min-height:140px; border:1px solid #ccc; border-radius:6px; padding:8px; resize:vertical; }
+    .saved { margin-top:12px; background:#eaf7e7; border-left:4px solid #28a745; padding:10px; display:none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Гид: сохранить состояние</h1>
+    <p>Пишем и сохраняем текст, далее обновляем страницу — текст в гиде восстанавливается.</p>
+    <textarea id="guideText" placeholder="Напишите текст"></textarea>
+    <div class="actions">
+      <button id="saveBtn">Сохранить в гид</button>
+      <button id="loadBtn">Загрузить из гида</button>
+      <button id="exportBtn">Скачать HTML</button>
+    </div>
+    <div id="status" class="saved">Данные сохранены.</div>
+  </div>
+
+  <script>
+    const key = 'labbbb1_guide_text';
+    const text = document.getElementById('guideText');
+    const status = document.getElementById('status');
+
+    function show(msg){ status.textContent=msg; status.style.display='block'; setTimeout(()=>status.style.display='none',2400); }
+
+    function saveGuide(){ localStorage.setItem(key, text.value); show('Сохранено в гиде (localStorage).'); }
+    function loadGuide(){ let v=localStorage.getItem(key); if(v!==null){ text.value=v; show('Загружено из гида.'); } else show('В гиде пусто.'); }
+
+    function exportHtml(){
+      let content = `<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><title>Экспорт</title></head><body><pre>${text.value.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</pre></body></html>`;
+      let blob = new Blob([content],{type:'text/html'});
+      let u = URL.createObjectURL(blob);
+      let a = document.createElement('a'); a.href=u; a.download='labbbb1-guide.html'; a.click(); URL.revokeObjectURL(u);
+    }
+
+    document.getElementById('saveBtn').onclick = saveGuide;
+    document.getElementById('loadBtn').onclick = loadGuide;
+    document.getElementById('exportBtn').onclick = exportHtml;
+    loadGuide();
+  </script>
+</body>
+</html>
