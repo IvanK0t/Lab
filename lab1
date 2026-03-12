@@ -141,55 +141,78 @@
         <ul>
           <li>
             <h3>Увага до деталей</h3>
-            <p>Короткий опис переваги.</p>
+            <p>Ми ретельно опрацьовуємо кожен елемент проєкту.</p>
           </li>
           <li>
             <h3>Пунктуальність</h3>
-            <p>Короткий опис переваги.</p>
+            <p>Завжди дотримуємося встановлених термінів виконання.</p>
           </li>
           <li>
             <h3>Планування</h3>
-            <p>Короткий опис переваги.</p>
+            <p>Продумуємо роботу наперед, щоб уникнути помилок.</p>
           </li>
           <li>
             <h3>Сучасні технології</h3>
-            <p>Короткий опис переваги.</p>
+            <p>Використовуємо актуальні інструменти та підходи у розробці.</p>
           </li>
         </ul>
       </section>
 
-      <section id="services">
-        <h2>Чим ми займаємося</h2>
-        <ul>
-          <li>
-            <img src="images/service1.jpg" width="370" alt="Робота за комп'ютером" />
-          </li>
-          <li>
-            <img src="images/service2.jpg" width="370" alt="Мобільний додаток" />
-          </li>
-          <li>
-            <img src="images/service3.jpg" width="370" alt="Графічний планшет" />
-          </li>
-        </ul>
-      </section>
+<section id="services">
+  <h2>Чим ми займаємоємося</h2>
+
+
+<section id="services">
+  <h2>Чим ми займаємоємося</h2>
+
+  <ul>
+    <li>
+      <img
+        src="https://apau.org.ua/wp-content/uploads/2021/07/ea4adad29313636f2a6af94c948c6dee_L.jpg"
+        width="370"
+        alt="Робота за комп'ютером"
+      />
+      <p>Робота за комп'ютером</p>
+    </li>
+
+    <li>
+      <img
+        src="https://today.ua/wp-content/uploads/2021/03/prylozhenyya.jpg"
+        width="370"
+        alt="Мобільний додаток"
+      />
+      <p>Мобільний додаток</p>
+    </li>
+
+    <li>
+      <img
+        src="https://technodoctor.kiev.ua/wp-content/uploads/2017/07/graficheskiy-planshet.jpg"
+        width="370"
+        alt="Графічний планшет"
+      />
+      <p>Графічний планшет</p>
+    </li>
+  </ul>
+</section>
+
 
       <section id="team">
         <h2>Наша команда</h2>
         <ul>
           <li>
-            <img src="images/team1.jpg" width="270" alt="Фото співробітника" />
-            <h3>Ім'я Прізвище</h3>
-            <p>Посада</p>
+            <img src="https://cdn.create.vista.com/api/media/small/157020078/stock-photo-handsome-stylish-businessman" width="270" alt="Фото співробітника" />
+            <h3>Ігор Дем'яненко — Дизайнер</h3>
+            <p>Створює сучасні та зручні інтерфейси.</p>
           </li>
           <li>
-            <img src="images/team2.jpg" width="270" alt="Фото співробітника" />
-            <h3>Ім'я Прізвище</h3>
-            <p>Посада</p>
+            <img src="https://viphr.com.ua/wp-content/uploads/2021/06/%D1%82%D0%BE%D0%BA%D1%81%D0%B8%D1%87%D0%BD%D1%8B%D0%B9-%D1%81%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D0%BA.jpg" width="270" alt="Фото співробітника" />
+            <h3>Микола Тарасов — Маркетолог</h3>
+            <p>Допомагає брендам знаходити свою аудиторію.</p>
           </li>
           <li>
-            <img src="images/team3.jpg" width="270" alt="Фото співробітника" />
-            <h3>Ім'я Прізвище</h3>
-            <p>Посада</p>
+            <img src="https://texty.org.ua/action/file/download?file_guid=76043" width="270" alt="Фото співробітника" />
+            <h3>Михайло Єрмаков  — Фронтенд-розробник</h3>
+            <p>Втілює дизайн у якісний та адаптивний код.</p>
           </li>
         </ul>
       </section>
